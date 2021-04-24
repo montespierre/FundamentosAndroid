@@ -1,24 +1,52 @@
 package com.weimont.fundamentosandoird;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends Activity {
+
+    public int contador;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        // Context: Es una clase que pide resolucion de preferencia de la aplicaion y de pantalla
-        // This le pasa la propia clase donde nos encontramos
-        TextView miTexto = new TextView(this);
+        contador = 0;
 
-        // Establecer el texto
-        miTexto.setText("Mi primera aplicacion");
 
-        // Que vista va a vizualizar la actividad
-        setContentView(miTexto);
+    }
+
+    public void incrementaContador(View vista){
+        contador++;
+        mostrarResultado();
+
+    }
+
+    public void restaContador(View vista){
+        contador --;
+        mostrarResultado();
+
+    }
+
+    public void resetearContador(View vista){
+        contador = 0;
+        mostrarResultado();
+
+
+    }
+
+    public void mostrarResultado(){
+        TextView tvContadorPulsaciones;
+
+        // vincual el codigo en java del TV a TV de layout
+        tvContadorPulsaciones = findViewById(R.id.contadorPulsaciones);
+        tvContadorPulsaciones.setText(Integer.toString(contador));
+
     }
 }
