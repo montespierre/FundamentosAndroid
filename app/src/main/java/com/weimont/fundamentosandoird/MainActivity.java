@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
         TextView tvContadorPulsaciones;
 
         // vincual el codigo en java del TV a TV de layout
-        tvContadorPulsaciones = findViewById(R.id.contadorPulsaciones);
+        tvContadorPulsaciones = findViewById(R.id.contadorTexto);
         tvContadorPulsaciones.setText(Integer.toString(contador));
 
     }

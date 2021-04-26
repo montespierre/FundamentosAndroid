@@ -4,54 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        tools:ignore="MissingConstraints"
-        android:id="@+id/contadorPulsaciones"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contador"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="115dp" />
+        android:layout_height="wrap_content" >
+
+        <TextView
+            tools:ignore="MissingConstraints"
+            android:id="@+id/tituloTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contador"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="115dp" />
+
+        <TextView
+            tools:ignore="MissingConstraints"
+            android:id="@+id/contadorTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="115dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/incrementa"
+            android:textSize="30dp"
+            android:onClick="incrementaContador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"/>
+
+        <Button
+            android:id="@+id/decrementa"
+            android:textSize="30dp"
+            android:onClick="restaContador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/resetea"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/resetea"
+            android:textSize="30dp"
+            android:onClick="resetearContador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resetear" />
+
+    </LinearLayout>
 
 
-    <Button
-        android:id="@+id/incrementa"
-        android:onClick="incrementaContador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/contadorPulsaciones"
-        android:layout_marginBottom="-186dp"
-        android:text="Incrementa"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="200dp" />
 
-    <Button
-        android:id="@+id/resetea"
-        android:onClick="resetearContador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/incrementa"
-        android:layout_marginBottom="-167dp"
-        android:text="Resetear"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="298dp" />
 
-    <Button
-        android:id="@+id/decrementa"
-        android:onClick="restaContador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/resetea"
-        android:layout_marginBottom="-200dp"
-        android:text="Decrementa"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="402dp" />
+
+
+
+
+
 </RelativeLayout>
