@@ -80,6 +80,23 @@
             android:layout_height="wrap_content"
             android:text="Resetear" />
 
+        <EditText
+            android:id="@+id/n_reseteo"
+            android:layout_width="72sp"
+            android:hint="0"
+            android:inputType="numberSigned"
+            android:cursorVisible="false"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Conteo negativo"
+            />
+
     </LinearLayout>
 
 
