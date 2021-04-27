@@ -50,6 +50,10 @@
             android:layout_height="wrap_content"
             android:text="+"/>
 
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="0dp" />
+
         <Button
             android:id="@+id/decrementa"
             android:textSize="30dp"
