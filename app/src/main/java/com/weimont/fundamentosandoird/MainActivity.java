@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textoResultado = findViewById(R.id.contadorTexto);
+        textoResultado = (TextView) findViewById(R.id.contadorTexto);
 
         contador = 0;
 
