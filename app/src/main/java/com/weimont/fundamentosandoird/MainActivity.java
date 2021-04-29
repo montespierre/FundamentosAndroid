@@ -4,6 +4,7 @@ package com.weimont.fundamentosandoird;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -63,6 +64,12 @@ public class MainActivity extends Activity {
         numero_reset.setText("");
 
         textoResultado.setText(Integer.toString(contador));
+
+        // mostrar el metodo de entrada
+        InputMethodManager miteclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+
+        // oculta el teclado
+        miteclado.hideSoftInputFromWindow(numero_reset.getWindowToken(), 0);
 
 
 
