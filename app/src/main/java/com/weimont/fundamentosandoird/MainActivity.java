@@ -18,16 +18,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //btn1 = (Button) findViewById(R.id.btnClaseAnonima);
-
+        btn1 = (Button) findViewById(R.id.btnClaseAnonima);
         btn2 = (Button) findViewById(R.id.btnImplements);
+
         btn2.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), "Desde el implements", Toast.LENGTH_LONG).show();
+
+        if(v.getId() == btn2.getId()){
+            Toast.makeText(getApplicationContext(), "Desde el implements", Toast.LENGTH_LONG).show();
+        }
+
+        if(v.getId() == R.id.btnXml){
+            Toast.makeText(getApplicationContext(), "Desde el xml", Toast.LENGTH_LONG).show();
+        }
+
+        if(v.getId() == R.id.btnClaseAnonima){
+            Toast.makeText(getApplicationContext(), "Desde clase anonima", Toast.LENGTH_LONG).show();
+        }
+
 
     }
 }
