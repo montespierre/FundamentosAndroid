@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btn1, btn2;
 
@@ -18,16 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = (Button) findViewById(R.id.btnClaseAnonima);
+        //btn1 = (Button) findViewById(R.id.btnClaseAnonima);
+
         btn2 = (Button) findViewById(R.id.btnImplements);
+        btn2.setOnClickListener(this);
 
-        // onclik esta dentro de la interfaz onClickListener
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Desde la anonimas", Toast.LENGTH_LONG).show();
+    }
 
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(getApplicationContext(), "Desde el implements", Toast.LENGTH_LONG).show();
+
     }
 }
