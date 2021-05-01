@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
 
     Button btn1, btn2;
 
@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //btn1 = (Button) findViewById(R.id.btnClaseAnonima);
 
-        btn2 = (Button) findViewById(R.id.btnImplements);
-        btn2.setOnClickListener(this);
+       // btn2 = (Button) findViewById(R.id.btnImplements);
+        // btn2.setOnClickListener(this);
+
+
 
     }
 
-    @Override
-    public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), "Desde el implements", Toast.LENGTH_LONG).show();
-
+    public void eventoBoton(View view) {
+        Toast.makeText(getApplicationContext(), "Desde el XML", Toast.LENGTH_LONG).show();
     }
 }
